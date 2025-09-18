@@ -1,0 +1,26 @@
+% Colors used for test tables.
+\definecolor{CustomRed}{HTML}{FF6666}%FFACAB}
+\definecolor{CustomLightRed}{HTML}{FEDBD5}
+\definecolor{CustomOrange}{HTML}{FFD7B3}
+\definecolor{CustomYellow}{HTML}{FFF6BA}
+\definecolor{CustomLightGreen}{HTML}{EEFADB}
+\colorlet{CustomGreen}{SpringGreen!80}
+
+
+%%% Macro that defines colors according to test success.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PassedTest        |      Vert (CustomGreen)                  | = 100%
+% OftenPassedTest   |      Vert clair (CustomLightGreen)       | 75 >= and < 100
+% EvenPassedTest    |      Jaune (CustomYellow)                | 50 >= and < 75
+% OftenFailedTest   |      Orange (CustomOrange)               | 25 >= and < 50
+% TooManyFailedTest |      Rouge clair (CustomLightRed)        | 0 > and < 25
+% FailedTest        |      Rouge (CustomRed)                   | = 0 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\PassedTest}[0]{\cellcolor{CustomGreen}}
+\newcommand{\FailedTest}[0]{\cellcolor{CustomRed}}
+\newcommand{\TooManyFailedTest}[0]{\cellcolor{CustomLightRed}}
+\newcommand{\OftenFailedTest}[0]{\cellcolor{CustomOrange}}
+\newcommand{\EvenPassedTest}[0]{\cellcolor{CustomYellow}}
+\newcommand{\OftenPassedTest}[0]{\cellcolor{CustomLightGreen}}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
